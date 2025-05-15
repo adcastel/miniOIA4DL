@@ -10,7 +10,7 @@ def download_and_extract_cifar100(data_dir='cifar-100-python'):
         filename = url.split('/')[-1]
         urllib.request.urlretrieve(url, filename)
         with tarfile.open(filename, 'r:gz') as tar:
-            tar.extractall()
+            tar.extractall(path='./data')
         os.remove(filename)
 
 def load_cifar100_batch(file):
