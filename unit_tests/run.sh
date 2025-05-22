@@ -1,5 +1,8 @@
 #!/bin/bash
-for test in $(ls *.py)
+folder="unit_tests/"
+utests=$(ls *.py)
+cd ..
+for test in $utests
 do
-    PYTHONPATH=. python3 $test
+    PYTHONPATH=. python3 ${folder}${test}
 done
