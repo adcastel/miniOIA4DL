@@ -4,7 +4,7 @@ import time
 import numpy as np
 import pickle
 import os
-from modules.eval import evaluate
+from eval import evaluate
 import sys
 
 # NO TOCAR, NO HACE FALTA TOCAR NADA DE ESTE FICHERO

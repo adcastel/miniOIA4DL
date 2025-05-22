@@ -3,9 +3,9 @@ from models.alexnet_cifar_100 import *
 from models.resnet18_cifar_100 import ResNet18_CIFAR100
 from models.tinycnn_cifar_100 import *
 from models.oianet_cifar100 import OIANET_CIFAR100
-from modules.train import train
-from modules.eval import evaluate
-from modules.performance import perf
+from train import train
+from eval import evaluate
+from performance import perf
 from data.cifar100_augmentator import CIFAR100Augmentor
 
 def main(model_name, batch_size, epochs, learning_rate, conv_algo, performance, eval_only):

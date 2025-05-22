@@ -2,9 +2,6 @@
 import math
 import time
 import numpy as np
-import pickle
-import os
-import sys
 
 # NO TOCAR, NO HACE FALTA TOCAR NADA DE ESTE FICHERO
 def compute_loss_and_gradient(predictions, labels):
@@ -34,17 +31,15 @@ def compute_loss_and_gradient(predictions, labels):
 
 def perf(model, train_images, train_labels, batch_size=64):
     num_samples = batch_size
-    epochs = 1
-
-    start_time = time.time()
-    i=0    
+    i=0
     batch_images = train_images[i:i+batch_size]
 
+    start_time = time.time()
+        
     output = batch_images
            
     output = model.forward(batch_images, curr_iter=i,training=False)
     
-            
     duration = time.time() - start_time
     ips = num_samples / duration
 
